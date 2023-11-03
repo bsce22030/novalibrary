@@ -12,39 +12,42 @@
     <link rel="stylesheet" href="your-custom-style.css">
 </head>
 <body>
-
-    <!-- Improved Navbar using Bootstrap -->
+   <!-- Centered Navbar with Logo to the Left and Menu Items to the Right -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a class="navbar-brand px-3" href="#">
-        <img src="media/logo/logo no bg.png" alt="logo" class="d-inline-block align-top" style="height: 30px;"> <!-- Adjust the height as needed -->
-        eLibraNova
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto"> <!-- ml-auto to align the menu items to the right -->
-            <li class="nav-item pl-3 pr-3">
-                <a class="nav-link" href="#">Menu</a>
-            </li>
-            <li class="nav-item active px-4">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item px-4">
-                <a class="nav-link" href="#">Rewards</a>
-            </li>
-            <li class="nav-item dropdown px-4"> <!-- Add "dropdown" class to the list item -->
-                <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Accounts
-                </a>
-                <div class="dropdown-menu" aria-labelledby="accountsDropdown">
-                    <a class="dropdown-item" href="#">Login</a>
-                    <a class="dropdown-item" href="#">Signup</a>
-                </div>
-            </li>
-        </ul>
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="media/logo/logo-no-bg.png" alt="logo" class="d-inline-block align-top" style="height: 30px;"> <!-- Adjust the height as needed -->
+            LibraNova
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto"> <!-- ml-auto to align the menu items to the right -->
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Menu</a>
+                </li>
+                <li class="nav-item active px-3">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link" href="#">Rewards</a>
+                </li>
+                <li class="nav-item dropdown px-3"> <!-- Add "dropdown" class to the list item -->
+                    <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accounts
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="accountsDropdown">
+                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="#">Signup</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
+
+
 
     <!-- Carousel Section using Bootstrap -->
     <div id="bookCarousel" class="carousel slide" data-ride="carousel">
