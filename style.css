@@ -9,11 +9,6 @@ body
     background: #2f5663;
 }
 
-.bg-header
-{
-    color: #c18653; /*website header*/
-}
-
 .container-form
 {
     transform: translateY(50%);
