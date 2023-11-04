@@ -12,6 +12,36 @@
     <!-- Add your custom CSS for styling -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        /* Custom CSS for dashboard */
+        .dashboard-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #17a2b8;
+            border-radius: 8px;
+        }
+
+        .profile-img {
+            max-width: 150px;
+            border: 5px solid #17a2b8;
+            border-radius: 50%;
+        }
+
+        .profile-details {
+            margin-top: 20px;
+        }
+
+        .book-list {
+            margin-top: 20px;
+            color: #383b38;
+        }
+
+        .downloads-list {
+            margin-top: 20px;
+            color: #383b38;
+        }
+    </style>
+
 </head>
 <body>
    <!-- Centered Navbar with Logo to the Left and Menu Items to the Right -->
@@ -31,12 +61,12 @@
                         Book Menu
                     </a>
                     <div class="dropdown-menu" aria-labelledby="MenuDropdown">
-                        <a class="dropdown-item" href="#">Sci-fi</a>
-                        <a class="dropdown-item" href="#">Horror</a>
-                        <a class="dropdown-item" href="#">Romance</a>
-                        <a class="dropdown-item" href="#">History</a>
-                        <a class="dropdown-item" href="#">Education</a>
-                        <a class="dropdown-item" href="#">Comedy & Drama</a>
+                        <a class="dropdown-item" href="BookMenu.html">Sci-fi</a>
+                        <a class="dropdown-item" href="BookMenu.html">Horror</a>
+                        <a class="dropdown-item" href="BookMenu.html">Romance</a>
+                        <a class="dropdown-item" href="BookMenu.html">History</a>
+                        <a class="dropdown-item" href="BookMenu.html">Education</a>
+                        <a class="dropdown-item" href="BookMenu.html">Comedy & Drama</a>
                     </div>
                 </li>
                 <li class="nav-item px-3">
@@ -59,72 +89,41 @@
     </div>
 </nav>
 
-<div class="container mt-4">
-    <h1>About Ganju Memelord</h1>
+<!--Dashboard code-->
+<!-- User Dashboard -->
+<div class="container dashboard-container mt-4">
     <div class="row">
-        <div class="col-md-8">
-            <p>Ganju Memelord is a passionate computer engineering student who enjoys coding in languages like C++, HTML, CSS, PHP, and SQL. They love solving problems, crafting logic, and using AI tools like ChatGPT to assist them.</p>
-            <p>But Ganju's interests go beyond the world of coding. They have a profound fascination with space and can talk about it for hours. Their dream is to become the greatest inventor in the history of humankind, and they're on a journey to make that dream a reality.</p>
-            <h2>Interests</h2>
-            <ul>
-                <li>Computer Engineering</li>
-                <li>Coding in C++, HTML, CSS, PHP, and SQL</li>
-                <li>Problem Solving</li>
-                <li>AI and ChatGPT</li>
-                <li>Space Exploration</li>
-                <li>Inventing</li>
-            </ul>
+        <div class="col-md-3">
+            <!-- User Profile Information -->
+            <img src="media/profiles/users/ali.png" alt="Profile Picture" class="profile-img">
+            <div class="profile-details">
+                <p><i class="fas fa-user"></i> <strong>Name:</strong> Ali Akhtar</p>
+                <p><i class="far fa-calendar-alt"></i> <strong>Join Date:</strong> January 1, 2022</p>
+                <!-- Add more user attributes here -->
+            </div>
         </div>
-        <div class="col-md-4">
-            <h2>Favorite Books</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Author</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Bauhaus Color Theory</td>
-                        <td>George H. Bauhas</td>
-                    </tr>
-                    <tr>
-                        <td>The Polaroid Book</td>
-                        <td>Sir Polaroid</td>
-                    </tr>
-                    <tr>
-                        <td>The Passion Within</td>
-                        <td>Cathy Mcfarth</td>
-                    </tr>
-                </tbody>
-            </table>
-            <h2>Download History</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Book Title</th>
-                        <th>Download Date</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Book of Inventions</td>
-                        <td>2023-01-15</td>
-                    </tr>
-                    <tr>
-                        <td>Space Chronicles</td>
-                        <td>2023-03-10</td>
-                    </tr>
-                    <tr>
-                        <td>Coding Wizards</td>
-                        <td>2023-05-22</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="col-md-9">
+            <!-- Favorite Books -->
+            <h3><i class="fas fa-heart"></i> Favorite Books</h3>
+            <ul class="list-group book-list">
+                <li class="list-group-item">The Polaroid Book</li>
+                <li class="list-group-item">Manhunt</li>
+                <li class="list-group-item">Bauhas Colour Theory</li>
+                <!-- Add more favorite books here -->
+            </ul>
+
+            <!-- Latest Downloads -->
+            <h3><i class="fas fa-download"></i> Latest Downloads</h3>
+            <ul class="list-group downloads-list">
+                <li class="list-group-item">IT, the book</li>
+                <li class="list-group-item">How To Rizz The Baddies</li>
+                <li class="list-group-item">The Power Of Cinematics</li>
+                <!-- Add more downloads here -->
+            </ul>
         </div>
     </div>
 </div>
+
 
 
 
