@@ -8,7 +8,10 @@ body
 {
     background: #2f5663;
 }
-
+.card
+{
+    border: 10px solid #d8d8d8;
+}
 .container-form
 {
     transform: translateY(50%);
