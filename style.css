@@ -1,6 +1,6 @@
 body
 {
-    background-color: #D8B188; /*bg*/
+    background-color: #D8B188; /* background of the website*/
     cursor: pointer;
     color: white;
 }
@@ -11,7 +11,7 @@ body
 
 .bg-header
 {
-    color: #c18653;
+    color: #c18653; /*website header*/
 }
 
 .container-form
@@ -21,5 +21,16 @@ body
 
 b,h1
 {
-    color: #2f5663;
+    color: #2f5663; /*heading text*/
+}
+
+.detail-text
+{
+    color: #383b38; /*The oil one for small text instead of black*/
+}
+
+ul li a /*The links of the website*/
+{
+    text-decoration: none;
+    color: #383b38;
 }
