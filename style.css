@@ -1,5 +1,25 @@
 body
 {
-    background-color: rgb(189, 188, 188);
+    background-color: #D8B188; /*bg*/
     cursor: pointer;
+    color: white;
+}
+.card-body
+{
+    background: #2f5663;
+}
+
+.bg-header
+{
+    color: #c18653;
+}
+
+.container-form
+{
+    transform: translateY(50%);
+}
+
+b,h1
+{
+    color: #2f5663;
 }
