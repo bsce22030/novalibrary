@@ -15,6 +15,9 @@
             text-decoration: none;
             color: azure;
         }
+        .rating-stars i {
+            cursor: pointer;
+        }
     </style>
     <!-- Add your custom CSS for styling -->
     <link rel="stylesheet" href="style.css">
@@ -53,15 +56,13 @@
                     </li>
                     <li class="nav-item dropdown px-3"> <!-- Add "dropdown" class to the list item -->
                         <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
-                            <img src="media/profiles/users/catto.jpg" alt="User Pic" class="rounded-circle" style="height: 30px; margin-right: 5px;">
-=======
->>>>>>> parent of afbd588 (done hogia boss man)
+                            <img src="media/profiles/users/ali.png" alt="User Pic" class="rounded-circle" style="height: 30px; margin-right: 5px;">
                             Accounts
                         </a>
                         <div class="dropdown-menu" aria-labelledby="accountsDropdown">
                             <a class="dropdown-item" href="login.html">Login</a>
                             <a class="dropdown-item" href="signup.html">Signup</a>
+                            <a class="dropdown-item" href="about.html">About Me</a>
                         </div>
                     </li>
                 </ul>
@@ -88,7 +89,22 @@
                 <li><a href="#"><i class="far fa-file-pdf"></i> PDF Download</a></li>
                 <li><a href="#"><i class="fas fa-book"></i> ePub</a></li>
                 <li><a href="#"><i class="fas fa-book-open"></i> Hardcover</a></li>
-            </ul>            
+            </ul> 
+
+            <!-- Book Rating Section -->
+
+            <div class="container mt-4">
+            <h3>Rate This Book</h3>
+            <div class="rating-stars">
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            </div>
+            <p class="mt-2">Average Rating: <span id="average-rating">0.0</span></p>
+            </div>          
+
         </div>
     </div>
 </div>
@@ -166,6 +182,37 @@
     <!-- Add jQuery and Bootstrap JS at the bottom of the page for faster loading -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // JavaScript for handling book rating
+        const stars = document.querySelectorAll('.rating-stars i');
+        const averageRatingElement = document.getElementById('average-rating');
+        let averageRating = 0;
 
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const rating = index + 1;
+                averageRating = (averageRating + rating) / 2;
+                updateStars(rating);
+                updateAverageRating();
+            });
+        });
+
+        function updateStars(rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.remove('far');
+                    star.classList.add('fas');
+                } else {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                }
+            });
+        }
+
+        function updateAverageRating() {
+            averageRatingElement.textContent = averageRating.toFixed(1);
+        }
+    </script>
 </body>
 </html>
