@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Polaroid Book - LibraNova</title>
+    <link rel="icon" href="media/logo/favicon.png">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <style>
+        .col-md-4 a
+        {
+            text-decoration: none;
+            color: azure;
+        }
+        .rating-stars i {
+            cursor: pointer;
+        }
+    </style>
+    <!-- Add your custom CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f5663; color: azure;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="media/logo/logo-no-bg.png" alt="logo" class="d-inline-block align-top" style="height: 30px;"> <!-- Adjust the height as needed -->
+                LibraNova
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> <!-- ml-auto to align the menu items to the right -->
+                    <li class="nav-item dropdown px-3"> <!-- Add "dropdown" class to the list item -->
+                        <a class="nav-link dropdown-toggle" href="#" id="MenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Book Menu
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="MenuDropdown">
+                        <a class="dropdown-item" href="Sci-Fi section.html">Sci-fi</a>
+                        <a class="dropdown-item" href="Horror Section.html">Horror</a>
+                        <a class="dropdown-item" href="Romance Section.html">Romance</a>
+                        <a class="dropdown-item" href="History Section.html">History</a>
+                        <a class="dropdown-item" href="Education Section.html">Education</a>
+                        <a class="dropdown-item" href="Drama Section.html">Comedy & Drama</a>
+                        </div>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="contact form.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item dropdown px-3"> <!-- Add "dropdown" class to the list item -->
+                        <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="media/profiles/users/ali.png" alt="User Pic" class="rounded-circle" style="height: 30px; margin-right: 5px;">
+                            Accounts
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="accountsDropdown">
+                            <a class="dropdown-item" href="login.html">Login</a>
+                            <a class="dropdown-item" href="signup.html">Signup</a>
+                            <a class="dropdown-item" href="about.html">About Me</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<br>
+<br>
+
+ <!-- Book Details Section -->
+ <div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="C:\Users\Raza\Desktop\library front end\Libra Del Worlde\New folder/Insidekick.jpg" class="img-fluid" alt="The Polaroid Book Cover" style="border: 10px solid #2f5663;">
+        </div>
+        <div class="col-md-8 detail-text">
+            <h1>Insidekick</h1>
+            <p><strong>Author:</strong>  J. F. BONE</p>
+            <p><strong>Genre:</strong> Sci-Fi</p>
+            <p><strong>Description:</strong> "Insidekick" is a seminal science fiction novel written by J. F. BONE, He watched humorlessly as the Antarian slithered out of the office with a flutter of 
+                colorful ceremonial robes. Both Kemmer and Shifaz had known for weeks that Johnson 
+                was a spy, but the native had to go through this insane rigmarole before the rules on 
+                Antar would allow him to act. At any rate, the formalities were over at last and the affair 
+                should be satisfactorily ended before nightfall. Natives moved quickly enough, once the 
+                preliminaries were concluded."</p>
+            <p><strong>Available Formats:</strong></p>
+            <ul>
+                <li><a href="C:\Users\Raza\Desktop\library front end\Libra Del Worlde\New folder\Insidekick.pdf"><i class="far fa-file-pdf"></i> PDF Download</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> ePub</a></li>
+                <li><a href="#"><i class="fas fa-book-open"></i> Hardcover</a></li>
+            </ul> 
+
+            <!-- Book Rating Section -->
+
+            <div class="container mt-4">
+            <h3>Rate This Book</h3>
+            <div class="rating-stars">
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            <i class="far fa-star fa-2x"></i>
+            </div>
+            <p class="mt-2">Average Rating: <span id="average-rating">0.0</span></p>
+            </div>          
+
+        </div>
+    </div>
+</div>
+
+<br> <br>
+<!-- Similar Books Section -->
+<div class="container mt-4">
+    <h2>Similar Books</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <a href="details.html">
+                <div class="card">
+                    <img src="media/books/details/similar section/art of decoration.jpg" class="card-img-top" alt="Book 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Art of Decoration</h5>
+                        <p class="card-text">Author: Jane Photographer</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="details.html">
+                <div class="card">
+                    <img src="media/books/details/similar section/night photography.jpg" class="card-img-top" alt="Book 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Night Photography</h5>
+                        <p class="card-text">Author: Lisa Snapshot</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4">
+            <a href="details.html">
+                <div class="card">
+                    <img src="media/books/details/similar section/photography.jpg" class="card-img-top" alt="Book 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Master Photography</h5>
+                        <p class="card-text">Author: Mark Shutterbug</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<br>
+    <!-- Footer Section using Bootstrap -->
+<footer class="bg-dark text-light py-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Contact Us</h3>
+                <p>If you have any questions or need assistance, feel free to reach out to us.</p>
+                <ul class="list-unstyled">
+                    <li>Email: contact@elibranova.com</li>
+                    <li>Phone: +1 (123) 456-7890</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us on social media for updates and news.</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <!-- Add more social media icons as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Add jQuery and Bootstrap JS at the bottom of the page for faster loading -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // JavaScript for handling book rating
+        const stars = document.querySelectorAll('.rating-stars i');
+        const averageRatingElement = document.getElementById('average-rating');
+        let averageRating = 0;
+
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const rating = index + 1;
+                averageRating = (averageRating + rating) / 2;
+                updateStars(rating);
+                updateAverageRating();
+            });
+        });
+
+        function updateStars(rating) {
+            stars.forEach((star, index) => {
+                if (index < rating) {
+                    star.classList.remove('far');
+                    star.classList.add('fas');
+                } else {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                }
+            });
+        }
+
+        function updateAverageRating() {
+            averageRatingElement.textContent = averageRating.toFixed(1);
+        }
+    </script>
+</body>
+</html>

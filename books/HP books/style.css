@@ -1,0 +1,34 @@
+body
+{
+    background-color: #D8B188; /* background of the website*/
+    cursor: pointer;
+    color: white;
+}
+.card-body
+{
+    background: #2f5663;
+}
+.card
+{
+    border: 10px solid #d8d8d8;
+}
+.container-form
+{
+    transform: translateY(50%);
+}
+
+b,h1
+{
+    color: #2f5663; /*heading text*/
+}
+
+.detail-text
+{
+    color: #383b38; /*The oil one for small text instead of black*/
+}
+
+ul li a /*The links of the website*/
+{
+    text-decoration: none;
+    color: #383b38;
+}
