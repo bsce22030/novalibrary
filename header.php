@@ -16,6 +16,93 @@ include_once ("functions.php");
     <!-- Add your custom CSS for styling -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+        body
+        {
+            background-color: #D8B188; /* background of the website*/
+            cursor: pointer;
+            color: white;
+        }
+        .card-body
+        {
+            background: #2f5663;
+        }
+        .card
+        {
+            border: 10px solid #d8d8d8;
+        }
+        .container-form
+        {
+            transform: translateY(50%);
+        }
+
+        b,h1
+        {
+            color: #2f5663; /*heading text*/
+        }
+
+        .detail-text
+        {
+            color: #383b38; /*The oil one for small text instead of black*/
+        }
+
+        ul li a /*The links of the website*/
+        {
+            text-decoration: none;
+            color: #383b38;
+        }
+
+        .container-form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-form .form-control {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-form button {
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        .contact-form button:hover {
+            background-color: #166fe5;
+        }
+
+        .contact-form .forgot-password {
+            text-align: right;
+        }
+
+        /*code for details.php*/
+        .col-md-4 a
+        {
+            text-decoration: none;
+            color: azure;
+        }
+        .rating-stars i {
+            cursor: pointer;
+        }
+
+    </style>
+
 </head>
 <body>
 <!-- Centered Navbar with Logo to the Left and Menu Items to the Right -->
@@ -64,4 +151,3 @@ include_once ("functions.php");
         </div>
     </div>
 </nav>
-<br><br>

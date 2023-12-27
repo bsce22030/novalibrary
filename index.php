@@ -6,7 +6,7 @@ include_once ("header.php");
 <div id="bookCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" style="height: 50vh;"> <!-- Set the carousel height to 1/3 of the screen -->
             <div class="carousel-item active">
-                <img src="media/carousal/carousal-1.jpg" class="d-block w-100" alt="Book Carousel Image 1">
+                <img src="media/carousal/carousal-1.png" class="d-block w-100" alt="Book Carousel Image 1">
             </div>
             <div class="carousel-item">
                 <img src="media/carousal/carousal-2.jpg" class="d-block w-100" alt="Book Carousel Image 2">
