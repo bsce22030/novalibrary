@@ -8,7 +8,7 @@ include_once ("functions.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Library</title>
-    <link rel="icon" href="media/logo/favicon.png">
+    <link rel="icon" href="media/logo/favicon-bg-remove.png">
     <!-- Add Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -109,7 +109,7 @@ include_once ("functions.php");
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2f5663; color: azure;">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="media/logo/logo-no-bg.png" alt="logo" class="d-inline-block align-top" style="height: 30px;"> <!-- Adjust the height as needed -->
+            <img src="media/logo/logo-bg-remove.png" alt="logo" class="d-inline-block align-top" style="height: 30px;"> <!-- Adjust the height as needed -->
             LibraNova
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,7 +138,7 @@ include_once ("functions.php");
                 </li>
                 <li class="nav-item dropdown px-3"> <!-- Add "dropdown" class to the list item -->
                     <a class="nav-link dropdown-toggle" href="#" id="accountsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="media/profiles/users/ali.png" alt="User Pic" class="rounded-circle" style="height: 30px; margin-right: 5px;">
+                        <img src="media/profiles/ali.jpg" alt="User Pic" class="rounded-circle" style="height: 30px; margin-right: 5px;">
                         Accounts
                     </a>
                     <div class="dropdown-menu" aria-labelledby="accountsDropdown">

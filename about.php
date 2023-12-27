@@ -13,7 +13,7 @@ include_once ("header.php");
     <div class="row">
         <div class="col-md-6">
             <!-- User Profile Information -->
-            <img src="media/profiles/users/ali.png" alt="Profile Picture" class="profile-img img-fluid">
+            <img src="media/profiles/ali.jpg" alt="Profile Picture" class="profile-img img-fluid">
             <div class="profile-details">
                 <br>
                 <p><i class="fas fa-user"></i> <strong>Name:</strong> Ali Akhtar</p>

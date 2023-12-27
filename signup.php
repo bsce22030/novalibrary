@@ -1,94 +1,95 @@
 <?php
-include_once ("header.php");
-?>
+include('header.php');
 
+$message = '';
+
+// Assuming you have a database connection stored in $conn
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve form data
+    $name = $_POST['name'] ?? '';
+    $username = $_POST['username'] ?? '';
+    $emailPhone = $_POST['emailPhone'] ?? '';
+    $password = $_POST['password'] ?? '';
+    $confirmPassword = $_POST['confirmPassword'] ?? '';
+
+    // Validate inputs
+    if (!empty($name) && !empty($username) && !empty($emailPhone) && !empty($password) && $password === $confirmPassword) {
+        // Hash the password for security
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Check if the username or email/phone is already in use
+        $check_query = "SELECT * FROM users WHERE Username=? OR Email_Phone=?";
+        $check_stmt = $conn->prepare($check_query);
+        $check_stmt->bind_param("ss", $username, $emailPhone);
+        $check_stmt->execute();
+        $check_result = $check_stmt->get_result();
+
+        if ($check_result->num_rows > 0) {
+            $message = "Username or Email/Phone already in use.";
+        } else {
+            // Prepare and execute SQL query to insert user data
+            $insert_query = "INSERT INTO users (Name, Username, Email_Phone, Password) VALUES (?, ?, ?, ?)";
+            $insert_stmt = $conn->prepare($insert_query);
+            $insert_stmt->bind_param("ssss", $name, $username, $emailPhone, $hashed_password);
+
+            if ($insert_stmt->execute()) {
+                $message = "Registration Successful!";
+            } else {
+                $message = "Error inserting data into the database.";
+            }
+        }
+    } else {
+        $message = "Please fill in all fields correctly and ensure passwords match.";
+    }
+}
+?>
 <style>
-    .image-container {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        background-color: #f0f0f0;
-        border: 1px solid #ccc;
-        cursor: pointer;
-    }
-    .image-container img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+        .form-container
+        {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 330px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            width: 100%;
+        }
 </style>
-<div class="container mt-4">
-    <h1>Create Your <b>LibraNova</b> Account</h1>
-    <br> <br>
-    <div class="row">
-        <div class="col-md-8">
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="John Doe">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="johndoe123">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="emailPhone">Email/Phone</label>
-                    <input type="email" class="form-control" id="emailPhone" placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="creditCard">Credit Card (Optional)</label>
-                    <input type="text" class="form-control" id="creditCard" placeholder="**** **** **** ****">
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="age">Age</label>
-                        <input type="number" class="form-control" id="age" placeholder="25">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" class="form-control" id="dob">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="********">
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="********">
-                    </div>
-                </div>
-                <div class="form-group form-check">
-                    <input type="radio" class="form-check-input" id="termsAndConditions">
-                    <label class="form-check-label" for="termsAndConditions">I agree to the <a href="#">Terms and Conditions</a></label>
-                </div>
-                <button type="submit" class="btn btn-primary">Create Account</button>
-            </form>
-        </div>
-        <div class="col-md-4">
+
+<div class="container vh-100">
+    <div class="form-container">
+        <h1 class="text-center mb-4">Create Your LibraNova Account</h1>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="form-group">
-                <label for="accountPicture">Account Picture</label>
-                <!-- Image container with a click event to trigger file input -->
-                <div class="image-container" onclick="triggerFileInput()">
-                    <img src="media/profiles/dummy pfp.png" alt="Profile Picture">
-                </div>
-                <!-- Actual file input, but hidden from view -->
-                <input type="file" class="form-control-file d-none" id="accountPicture">
+                <input type="text" class="form-control" placeholder="Your Name" name="name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" name="username" required>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email or Phone" name="emailPhone" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password" required>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Confirm Password" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="submit">Create Account</button>
+            <p class="text-center mt-3 message"><?php echo $message; ?></p>
+        </form>
     </div>
 </div>
-
-<script>
-    // JavaScript to trigger file input click on image click
-    function triggerFileInput() {
-        document.getElementById('accountPicture').click();
-    }
-</script>
-
-
 
 <?php
 include_once ("footer.php");
